@@ -47,9 +47,11 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 <!-- 1)Quick Test to Count Words and Characters -->
 Example:
+----
 Hello, I  am John.
-//
+----
 This text contains 4 words and 18 characters. Characters also include white spaces.
+
 <!-- 2)Quick Test to Count Sentences and Paragraphs -->
 It should recognize the sentences using punctuation marks as the sentence ends at (.!?). A paragraph starts from a new line and must contain at least a word.
 Example:

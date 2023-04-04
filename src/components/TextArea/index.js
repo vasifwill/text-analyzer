@@ -1,7 +1,9 @@
 import './index.scss'
 
-const TextArea = () => {
-  return <textarea className="text-area" placeholder="Paste your text here..." />
+const TextArea = ({handleChange}) => {
+  
+  
+  return <textarea className="text-area" placeholder="Paste your text here..." onChange={handleChange} />
 }
 
 export default TextArea

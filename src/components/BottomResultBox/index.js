@@ -1,16 +1,7 @@
 import './index.scss'
 
-const BottomResultBox = () => {
-  const bottomResultBar = [
-    {
-      title: 'Average Reading Time:',
-      value: '-',
-    },
-    {
-      title: 'Longest word:',
-      value: '-',
-    },
-  ]
+const BottomResultBox = ({bottomResultBar}) => {
+  
 
   return (
     <div className="bottom-result-bar">
