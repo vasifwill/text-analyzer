@@ -40,38 +40,54 @@ const bottomResultBar = [
   },
 ]
 const App = () => {
-  const [text, setText] = useState("")
+ const [text, setText] = useState("")
+
+ 
+
+  const handleChildData = (e) => {
+    setText(e.target.value)
+    }
+
+  
+
+    const handleCharacters = () => {
+      return resultBar[1].value = text.length
+      }
+
+      useEffect(() => {
+        handleCharacters()
+      })
+    
+  
   // const [resultBox, setResultBox]=useState(resultBar)
   // const [bottomResult, setbottomResult]=useState(bottomResultBar)
-  const handleChange = (e) => {
-    const texts=e.target.value
-    setText(texts)
-  }
+  // const handleChange = (e) => {
+  //   const texts=e.target.value
+  //   setText(texts)
+  //   console.log("this is letter - "+text)
+  //   console.log("this is length - "+text.length)
+  // }
 
   
 
   // const handleWords = () => {
-
+  //   var totalSoFar = 0;
+  //   for (var i = 0; i < WordCount.length; i++)
+  //     if (str(i) === " ") { // if a space is found in str
+  //       totalSoFar = +1; // add 1 to total so far
+  //   }
+  //   totalsoFar += 1;
+    
   // }
 
-  const handleCharacters = () => {
-   const wordLength = text.length
-   if(text != null){
-    text.map((item) => {
-      if(item.title === 'Characters'){
-        item.value = wordLength
-      }
-      return item
-    })
+  
 
-   }
 
-    
-  }
+  
 
-  useEffect(() => {
-    handleCharacters()
-  })
+   
+   
+
 
 
   // const handleSentences = () => {
@@ -103,11 +119,11 @@ const App = () => {
       <div className="small-container">
         <div className="main-app">
           <ResultBox resultBar={resultBar}/>
-          <TextArea handleChange={handleChange}/>
+          <TextArea  handleChildData={handleChildData} />
           <BottomResultBox  bottomResultBar={bottomResultBar}/>
         </div>
-        <div>Hello World {text}</div>
-      </div>
+        <div>{text}</div>
+        </div>
       <Footer />
     </>
   )
